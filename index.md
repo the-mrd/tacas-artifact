@@ -3,12 +3,12 @@ layout: default
 title: ""
 ---
 
-This page hosts the technical report as well as the artifact accompanying our research paper submission to TACAS26 called "Efficient Verification of Lingua Franca Models".
+This page hosts the technical report as well as the artifact accompanying our research paper submission to TACAS26 called _"Efficient Verification of Lingua Franca Models"_.
 All references to the authors have been removed to ensure anonymity during the review process.
 
 ## Technical Report
 
-[Efficient verification of LF tech rep (pdf)](techrep.pdf)
+[Efficient Verification tech rep (pdf)](techrep.pdf)
 
 ## Artifact
 
