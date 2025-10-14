@@ -1,8 +1,9 @@
-# Efficient Verification of Lingua Franca Models - Artifact
+---
+layout: default
+title: "Efficient Verification of Lingua Franca Models - Artifact"
+---
 
 This page hosts the artifact accompanying our anonymous research paper submission to TACAS26 called "Efficient Verification of Lingua Franca Models".
-
----
 
 ## Artifact
 
