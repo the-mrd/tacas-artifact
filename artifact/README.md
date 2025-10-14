@@ -7,7 +7,7 @@ This archive contains the source files and Docker configurations required to
 reproduce the results of the anonymous paper submission
 "Efficient Verification of Lingua Franca Models".
 
-## 🧩 Structure
+## Structure
 
 README.md (this file)  
 code.zip/  
@@ -23,7 +23,7 @@ _.lf_ files with analysis annotations into maude files that can be run
 by `lf-maude`.  
 `lf-rt-maude` contains the real-time analysis support for lingua-franca.
 
-## 🐳 Docker Environment
+## Docker Environment
 
 In order to ensure a consistent environment for running the experiments, we
 provide ready-built Docker images for testing. You can pull and run the
@@ -31,20 +31,20 @@ pre-built images from Github Container Registry.
 
 To test lf-mc (contains both lf-maude and lf-mc):
 
-```sh
+```bash
 docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
 lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
 ```
 
 We also provide native maude files that can be run with the following command inside Docker:
 
-```sh
+```bash
 maude /opt/lf-maude/lf-main-concrete.maude /opt/lf-maude/examples/pingPong.maude
 ```
 
 To test our real-time maude analysis, a separate Docker image is provided:
 
-```sh
+```bash
 docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
 maude /opt/lf-maude/RTMADAS.maude
 ```
