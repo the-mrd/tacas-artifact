@@ -18,9 +18,10 @@ checksum.txt
 
 Each subfolder contains its own source files.  
 `lf-maude` contains the maude intepreter for lingua-franca.  
-`lf-mc` contains the lingua franca compiler that automatically translates
-.lf files with analysis annotations into maude files that can be run by `lf-maude`.  
-`lf-rt-maude` contains the real-time analysis for lingua-franca.
+`lf-mc` contains the lingua franca compiler that automatically translates  
+_.lf_ files with analysis annotations into maude files that can be run  
+by `lf-maude`.  
+`lf-rt-maude` contains the real-time analysis support for lingua-franca.
 
 ## 🐳 Docker Environment
 
@@ -33,6 +34,11 @@ To test lf-mc (contains both lf-maude and lf-mc):
 ```sh
 docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
 lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
+```
+
+We also provide native maude files that can be run with the following command inside Docker:
+
+```sh
 maude /opt/lf-maude/lf-main-concrete.maude /opt/lf-maude/examples/pingPong.maude
 ```
 
