@@ -12,8 +12,8 @@ All references to the authors have been removed to ensure anonymity during the r
 
 ## Artifact
 
-- [Artifact README](artifact/README.md)
-- [Download source code](artifact/code.zip) ([Checksum file](artifact/checksum.txt))
+- [Download source code](artifact/code.zip) (zip archive)
+- [Checksum file](artifact/checksum.txt)
 
 ---
 
