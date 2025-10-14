@@ -6,16 +6,17 @@ reproduce the results of the anonymous paper submission
 
 ## 🧩 Structure
 
-README.md (this file)
-code.zip/
-├── lf-maude/
-├── lf-mc/
-└── lf-rt-maude/
+README.md (this file)  
+code.zip/  
+├── lf-maude/  
+├── lf-mc/  
+└── lf-rt-maude/  
 checksum.txt
 
-Each subfolder contains its own source files. `lf-maude` contains the maude intepreter for lingua-franca.
-`lf-mc` contains the lingua franca compiler that automatically translates .lf files with analysis
-annotations into maude files that can be run by `lf-maude`.
+Each subfolder contains its own source files.  
+`lf-maude` contains the maude intepreter for lingua-franca.  
+`lf-mc` contains the lingua franca compiler that automatically translates
+.lf files with analysis annotations into maude files that can be run by `lf-maude`.  
 `lf-rt-maude` contains the real-time analysis for lingua-franca.
 
 ## 🐳 Docker Environment
