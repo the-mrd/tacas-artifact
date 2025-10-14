@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "TACAS Research Artifact (Anonymous Submission)"
+title: ""
 ---
 
 This page hosts the technical report as well as the artifact accompanying our research paper submission to TACAS26 called "Efficient Verification of Lingua Franca Models".

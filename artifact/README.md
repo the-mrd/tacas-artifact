@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Artifact Instructions"
+title: ""
 ---
 
 This archive contains the source files and Docker configurations required to
