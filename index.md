@@ -1,15 +1,14 @@
 # TACAS26 Research Artifact (Anonymous Submission)
 
 Welcome!
-This page hosts the artifact accompanying our anonymous research paper submission to TACAS26.
+This page hosts the artifact accompanying our anonymous research paper submission to TACAS26 called "Efficient Verification of Lingua Franca Models".
 
 ---
 
 ## 📦 Contents
 
 - [Artifact README](artifact/README.md)
-- [Download source code](artifact/code.zip)
-- [Checksum file](artifact/checksum.txt)
+- [Download source code](artifact/code.zip) ([Checksum file](artifact/checksum.txt))
 
 ---
 
