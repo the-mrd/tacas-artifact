@@ -1,4 +1,7 @@
-# Artifact README
+---
+layout: default
+title: "Artifact Instructions"
+---
 
 This archive contains the source files and Docker configurations required to
 reproduce the results of the anonymous paper submission
