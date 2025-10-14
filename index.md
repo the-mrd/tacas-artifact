@@ -4,6 +4,7 @@ title: ""
 ---
 
 This page hosts the technical report as well as the artifact accompanying our research paper submission to [TACAS 2026](https://etaps.org/2026/conferences/tacas/) called _"Efficient Verification of Lingua Franca Models"_.
+
 All references to the authors have been removed to ensure anonymity during the review process.
 
 ## Technical Report
