@@ -221,9 +221,6 @@ lf-maude
         ├── ADASModel.lf
        ...
         └── UnsafeSend.lf
-
-
-
 ```
 
 At the root of the directory are the `.maude` files that implement the _LF_ interpreter.
@@ -263,8 +260,6 @@ lf-mc/
 │       │   │           │   │   ├── MaudeGenerator.java
 │       │   │           │   │  ...
 ... # other files ommitted for brevity
-
-
 ```
 
 This is a `Java` project built using `gradle`. The build used for this submission
