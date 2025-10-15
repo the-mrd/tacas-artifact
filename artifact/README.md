@@ -1,19 +1,22 @@
 ---
 layout: default
-title: "Artifact Build Instructions"
 ---
 
+# Artifact for "Efficient Verification of Lingua Franca Models"
+
 The [code](code.zip) archive contains the source files and Docker configurations
-required to reproduce the results of the anonymous paper submission
-_"Efficient Verification of Lingua Franca Models"_.  
+required to reproduce the results of our paper submission
+_"Efficient Verification of Lingua Franca Models"_.
+
 Below are instructions on how to set up the environment and run the experiments
-in Docker, followed by a description of the folder structure of the sources.
+in Docker, followed by a description of the of the sources' folder structure.
 
 ## Docker Environment
 
 In order to ensure a consistent environment for running the experiments, we
 provide ready-built Docker images for testing. You can pull and run the
-pre-built images from Github Container Registry.  
+pre-built images from Github Container Registry.
+
 This requires the reviewer to have [Docker](https://www.docker.com/get-started/)
 installed on their machine. [Docker desktop](https://docs.docker.com/desktop/) is
 recommended for Windows and MacOS users. Linux users can follow the
@@ -21,11 +24,10 @@ installation instructions for their specific distribution.
 
 ---
 
-The `lf-maude` folder contains the `Dockerfile` used to build the image.
-To test `lf-mc`` (contains both`lf-maude`and`lf-mc`):
+To test `lf-mc` (contains both`lf-maude`and`lf-mc`):
 
 ```console
-user@host:~$ docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+user@host:~$ $${\color{lightgreen}docker}$$ run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
 docker:/# lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
 ```
 
@@ -70,15 +72,15 @@ lf-maude
 └── examples
     ├── mod-gen
     │   ├── ADASModel
-│   │   │   └── ADASModel.maude
+    │   │   └── ADASModel.maude
     │  ...
     │   └── UnsafeSend
-│   │       └── UnsafeSend.maude
+    │       └── UnsafeSend.maude
 
     └── src
-│   │   ├── ADASModel.lf
-│   │  ...
-│   │   └── UnsafeSend.lf
+        ├── ADASModel.lf
+       ...
+        └── UnsafeSend.lf
 
 
 
