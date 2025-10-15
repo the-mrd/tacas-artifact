@@ -22,8 +22,6 @@ installed on their machine. [Docker desktop](https://docs.docker.com/desktop/) i
 recommended for Windows and MacOS users. Linux users can follow the
 installation instructions for their specific distribution.
 
----
-
 To test `lf-mc` (contains both`lf-maude`and`lf-mc`):
 
 <pre style="
@@ -36,7 +34,21 @@ To test `lf-mc` (contains both`lf-maude`and`lf-mc`):
   font-size: 0.9em;
   line-height: 1.5;
   border: 1px solid var(--color-border-default, #30363d);
+  position: relative;
 ">
+  <button style="
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--color-neutral-muted, #161b22);
+    color: var(--color-fg-default, #e6edf3);
+    border: 1px solid var(--color-border-default, #30363d);
+    border-radius: 6px;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+  " onclick="navigator.clipboard.writeText(`docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf`); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
 <span style="color: var(--color-success-fg, #3fb950);">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
 <span style="color: var(--color-success-fg, #3fb950);">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
 </pre>
