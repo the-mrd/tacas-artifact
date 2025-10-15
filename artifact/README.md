@@ -28,9 +28,7 @@ To test `lf-mc` (contains both `lf-maude` and `lf-mc`) open a new shell session 
     <button class="copy-btn" onclick="copyCommand(this)"
     data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l">Copy</button>
     <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
-
-    <textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l</textarea>
-
+<textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l</textarea>
 </div>
 
 The experiments are located in `/opt/lf-maude/examples/src/` inside the docker instance. To compile and
@@ -40,10 +38,8 @@ verify the `TrainDoor_v3.lf` example, run the following command:
     <button class="copy-btn" onclick="copyCommand(this)"
     data-command="lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf">Copy</button>
     <span class="prompt">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
-
-    <textarea class="copy-fallback" rows="2" readonly>lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf</textarea>
-
-  </div>
+<textarea class="copy-fallback" rows="2" readonly>lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf</textarea>
+</div>
 
 We also provide native `maude` files that can be run with the following command
 inside Docker:
@@ -54,11 +50,8 @@ inside Docker:
     maude lf-main-concrete.maude examples/pingPong.maude">Copy</button>
     <span class="prompt">docker:/#</span> cd /opt/lf-maude/<br>
     <span class="prompt">docker:/opt/lf-maude#</span> maude lf-main-concrete.maude examples/pingPong.maude
-
-    <textarea class="copy-fallback" rows="3" readonly>cd /opt/lf-maude/
-
+<textarea class="copy-fallback" rows="3" readonly>cd /opt/lf-maude/
 maude lf-main-concrete.maude examples/pingPong.maude</textarea>
-
 </div>
 
 To test our `real-time maude` analysis, a separate Docker image is provided:
@@ -67,10 +60,8 @@ To test our `real-time maude` analysis, a separate Docker image is provided:
     <button class="copy-btn" onclick="copyCommand(this)"
     data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l">Copy</button>
     <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
-
-    <textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l</textarea>
-
-  </div>
+<textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l</textarea>
+</div>
 
 To run the analysis commands for the `ADAS` example, use the following command:
 
@@ -78,9 +69,7 @@ To run the analysis commands for the `ADAS` example, use the following command:
     <button class="copy-btn" onclick="copyCommand(this)"
     data-command="maude /opt/lf-maude/RTM-ADAS.maude">Copy</button>
   <span class="prompt">docker:/#</span> maude /opt/lf-maude/RTM-ADAS.maude
-
 <textarea class="copy-fallback" rows="2" readonly>maude /opt/lf-maude/RTM-ADAS.maude</textarea>
-
 </div>
 
 ## Source code Structure
