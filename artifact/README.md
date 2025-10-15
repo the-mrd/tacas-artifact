@@ -29,7 +29,6 @@ To test `lf-mc` (contains both `lf-maude` and `lf-mc`) open a new shell session 
     data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l">Copy</button>
     <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
 
-    <label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
     <textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l</textarea>
 
 </div>
@@ -42,7 +41,6 @@ verify the `TrainDoor_v3.lf` example, run the following command:
     data-command="lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf">Copy</button>
     <span class="prompt">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
 
-    <label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
     <textarea class="copy-fallback" rows="2" readonly>lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf</textarea>
 
   </div>
@@ -57,7 +55,6 @@ inside Docker:
     <span class="prompt">docker:/#</span> cd /opt/lf-maude/<br>
     <span class="prompt">docker:/opt/lf-maude#</span> maude lf-main-concrete.maude examples/pingPong.maude
 
-    <label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
     <textarea class="copy-fallback" rows="3" readonly>cd /opt/lf-maude/
 
 maude lf-main-concrete.maude examples/pingPong.maude</textarea>
@@ -71,7 +68,6 @@ To test our `real-time maude` analysis, a separate Docker image is provided:
     data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l">Copy</button>
     <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
 
-    <label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
     <textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l</textarea>
 
   </div>
@@ -83,7 +79,6 @@ To run the analysis commands for the `ADAS` example, use the following command:
     data-command="maude /opt/lf-maude/RTM-ADAS.maude">Copy</button>
   <span class="prompt">docker:/#</span> maude /opt/lf-maude/RTM-ADAS.maude
 
-<label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
 <textarea class="copy-fallback" rows="2" readonly>maude /opt/lf-maude/RTM-ADAS.maude</textarea>
 
 </div>
