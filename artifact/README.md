@@ -97,7 +97,7 @@ inside Docker:
   <button onclick="copyCommand(this)" data-command="cd /opt/lf-maude/
 maude lf-main-concrete.maude examples/pingPong.maude">Copy</button>
   <span class="prompt">docker:/#</span> cd /opt/lf-maude/<br>
-<span class="prompt">docker:/#</span> maude lf-main-concrete.maude examples/pingPong.maude
+<span class="prompt">docker:/opt/lf-maude#</span> maude lf-main-concrete.maude examples/pingPong.maude
 </div>
 
 To test our `real-time maude` analysis, a separate Docker image is provided:
