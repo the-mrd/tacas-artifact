@@ -3,7 +3,8 @@
 
 @import "minima";
 
-/* Command block style */
+/* ── Reusable command block styles (theme-aware via Minima vars) ─────────── */
+
 .command-block {
   background-color: var(--color-canvas-subtle, #f6f8fa);
   color: var(--color-fg-default, #24292e);
@@ -18,7 +19,6 @@
   margin-bottom: 1em;
 }
 
-/* Prompt color */
 .command-block .prompt {
   color: var(--color-success-fg, #1f6feb);
 }
@@ -47,9 +47,8 @@
   border-color: var(--color-success-fg, #1f6feb);
 }
 
-/* Fallback (no JS) */
+/* Progressive enhancement fallback: default = no JS */
 .copy-btn { display: none; }
-
 .copy-fallback {
   display: block;
   width: 100%;
@@ -64,6 +63,6 @@
   resize: vertical;
 }
 
-/* Enable enhancements when JS is active */
+/* When JS is active, show button and hide fallback */
 .js .copy-btn { display: inline-block; }
 .js .copy-fallback { display: none; }
