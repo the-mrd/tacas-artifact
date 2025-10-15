@@ -1,0 +1,15 @@
+<script>
+// Mark page as JS-enabled (used by CSS fallbacks)
+document.documentElement.classList.add('js');
+
+function copyCommand(btn) {
+  const cmd = btn.getAttribute('data-command');
+  navigator.clipboard.writeText(cmd);
+  btn.textContent = 'Copied!';
+  btn.classList.add('copied');
+  setTimeout(() => {
+    btn.textContent = 'Copy';
+    btn.classList.remove('copied');
+  }, 2000);
+}
+</script>

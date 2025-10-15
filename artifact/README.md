@@ -2,59 +2,6 @@
 layout: default
 ---
 
-<style>
-  .command-block {
-    background-color: var(--color-canvas-subtle, #f6f8fa);
-      /* fallback #f6f8fa if variable is missing */
-    color: var(--color-fg-default, #24292e);
-    padding: 1em;
-    border-radius: 6px;
-    overflow-x: auto;
-    font-family: SFMono-Regular, Consolas, monospace;
-    font-size: 0.9em;
-    line-height: 1.5;
-    border: 1px solid var(--color-border-default, #d0d7de);
-    position: relative;
-    margin-bottom: 1em;
-  }
-  .command-block .prompt {
-    color: var(--color-success-fg, #1f6feb);
-  }
-  .command-block button {
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    background: var(--color-canvas-default, #ffffff);
-    color: var(--color-fg-default, #24292e);
-    border: 1px solid var(--color-border-default, #d0d7de);
-    border-radius: 6px;
-    font-size: 0.75em;
-    padding: 0.25em 0.5em;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  .command-block button:hover {
-    background: var(--color-canvas-subtle, #f6f8fa);
-  }
-  .command-block button.copied {
-    color: var(--color-success-fg, #1f6feb);
-    border-color: var(--color-success-fg, #1f6feb);
-  }
-</style>
-
-<script>
-function copyCommand(btn) {
-  const cmd = btn.getAttribute('data-command');
-  navigator.clipboard.writeText(cmd);
-  btn.textContent = 'Copied!';
-  btn.classList.add('copied');
-  setTimeout(() => {
-    btn.textContent = 'Copy';
-    btn.classList.remove('copied');
-  }, 2000);
-}
-</script>
-
 # Artifact for "Efficient Verification of Lingua Franca Models"
 
 The [code](code.zip) archive contains the source files and Docker configurations
@@ -78,40 +25,67 @@ installation instructions for their specific distribution.
 To test `lf-mc` (contains both `lf-maude` and `lf-mc`) open a new shell session inside the docker instance (will download the image the first time the command is run, then reuse the cached image on subsequent runs):
 
 <div class="command-block">
-  <button onclick="copyCommand(this)" data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l">Copy</button>
-  <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+    <button class="copy-btn" onclick="copyCommand(this)"
+    data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l">Copy</button>
+    <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+
+    <label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
+    <textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l</textarea>
+
 </div>
 
 The experiments are located in `/opt/lf-maude/examples/src/` inside the docker instance. To compile and
 verify the `TrainDoor_v3.lf` example, run the following command:
 
 <div class="command-block">
-  <button onclick="copyCommand(this)" data-command="lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf">Copy</button>
-  <span class="prompt">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
-</div>
+    <button class="copy-btn" onclick="copyCommand(this)"
+    data-command="lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf">Copy</button>
+    <span class="prompt">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
+
+    <label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
+    <textarea class="copy-fallback" rows="2" readonly>lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf</textarea>
+
+  </div>
 
 We also provide native `maude` files that can be run with the following command
 inside Docker:
 
 <div class="command-block">
-  <button onclick="copyCommand(this)" data-command="cd /opt/lf-maude/
-maude lf-main-concrete.maude examples/pingPong.maude">Copy</button>
-  <span class="prompt">docker:/#</span> cd /opt/lf-maude/<br>
-<span class="prompt">docker:/opt/lf-maude#</span> maude lf-main-concrete.maude examples/pingPong.maude
+    <button class="copy-btn" onclick="copyCommand(this)"
+    data-command="cd /opt/lf-maude/
+    maude lf-main-concrete.maude examples/pingPong.maude">Copy</button>
+    <span class="prompt">docker:/#</span> cd /opt/lf-maude/<br>
+    <span class="prompt">docker:/opt/lf-maude#</span> maude lf-main-concrete.maude examples/pingPong.maude
+
+    <label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
+    <textarea class="copy-fallback" rows="3" readonly>cd /opt/lf-maude/
+
+maude lf-main-concrete.maude examples/pingPong.maude</textarea>
+
 </div>
 
 To test our `real-time maude` analysis, a separate Docker image is provided:
 
 <div class="command-block">
-  <button onclick="copyCommand(this)" data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l">Copy</button>
-  <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
-</div>
+    <button class="copy-btn" onclick="copyCommand(this)"
+    data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l">Copy</button>
+    <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
+
+    <label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
+    <textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l</textarea>
+
+  </div>
 
 To run the analysis commands for the `ADAS` example, use the following command:
 
 <div class="command-block">
-  <button onclick="copyCommand(this)" data-command="maude /opt/lf-maude/RTM-ADCAS.maude">Copy</button>
-  <span class="prompt">docker:/#</span> maude /opt/lf-maude/RTM-ADCAS.maude
+    <button class="copy-btn" onclick="copyCommand(this)"
+    data-command="maude /opt/lf-maude/RTM-ADAS.maude">Copy</button>
+  <span class="prompt">docker:/#</span> maude /opt/lf-maude/RTM-ADAS.maude
+
+<label style="display:block;margin-top:0.5rem;font-size:0.85em;">Copy manually if button disabled:</label>
+<textarea class="copy-fallback" rows="2" readonly>maude /opt/lf-maude/RTM-ADAS.maude</textarea>
+
 </div>
 
 ## Source code Structure

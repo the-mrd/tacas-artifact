@@ -20,6 +20,7 @@ All references to the authors have been removed to ensure anonymity during the r
 ## Artifact
 
 - [Source code](artifact/code.zip) ([zip](artifact/code.zip) [tar.gz](artifact/code.tar.gz))
+- [lf-mc package](artifact/lf-mc-1.1-package.tar.gz)
 - [Checksum file](artifact/checksum.txt)
 
 ---
