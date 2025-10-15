@@ -3,43 +3,43 @@ layout: default
 ---
 
 <style>
-.command-block {
-  background-color: var(--color-canvas-subtle, #f6f8fa);
-    /* fallback #f6f8fa if variable is missing */
-  color: var(--color-fg-default, #24292e);
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-family: SFMono-Regular, Consolas, monospace;
-  font-size: 0.9em;
-  line-height: 1.5;
-  border: 1px solid var(--color-border-default, #d0d7de);
-  position: relative;
-  margin-bottom: 1em;
-}
-.command-block .prompt {
-  color: var(--color-success-fg, #1f6feb);
-}
-.command-block button {
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  background: var(--color-canvas-default, #ffffff);
-  color: var(--color-fg-default, #24292e);
-  border: 1px solid var(--color-border-default, #d0d7de);
-  border-radius: 6px;
-  font-size: 0.75em;
-  padding: 0.25em 0.5em;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-.command-block button:hover {
-  background: var(--color-canvas-subtle, #f6f8fa);
-}
-.command-block button.copied {
-  color: var(--color-success-fg, #1f6feb);
-  border-color: var(--color-success-fg, #1f6feb);
-}
+  .command-block {
+    background-color: var(--color-canvas-subtle, #f6f8fa);
+      /* fallback #f6f8fa if variable is missing */
+    color: var(--color-fg-default, #24292e);
+    padding: 1em;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: SFMono-Regular, Consolas, monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    border: 1px solid var(--color-border-default, #d0d7de);
+    position: relative;
+    margin-bottom: 1em;
+  }
+  .command-block .prompt {
+    color: var(--color-success-fg, #1f6feb);
+  }
+  .command-block button {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--color-canvas-default, #ffffff);
+    color: var(--color-fg-default, #24292e);
+    border: 1px solid var(--color-border-default, #d0d7de);
+    border-radius: 6px;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .command-block button:hover {
+    background: var(--color-canvas-subtle, #f6f8fa);
+  }
+  .command-block button.copied {
+    color: var(--color-success-fg, #1f6feb);
+    border-color: var(--color-success-fg, #1f6feb);
+  }
 </style>
 
 <script>
@@ -97,8 +97,8 @@ inside Docker:
 <div class="command-block">
   <button onclick="copyCommand(this)" data-command="cd /opt/lf-maude/
 maude lf-main-concrete.maude examples/pingPong.maude">Copy</button>
-  <span class="prompt">docker:/#</span> cd /opt/lf-maude/
-maude lf-main-concrete.maude examples/pingPong.maude
+  <span class="prompt">docker:/#</span> cd /opt/lf-maude/<br>
+<span class="prompt">docker:/#</span> maude lf-main-concrete.maude examples/pingPong.maude
 </div>
 
 ---
