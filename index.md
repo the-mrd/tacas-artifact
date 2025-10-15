@@ -3,10 +3,12 @@ layout: default
 title: ""
 ---
 
-# Efficient Verification of Lingua Franca Models
+# Efficient Verification of Lingua Franca Programs
 
-Welcome to the artifact page for our TACAS 2026 submission, titled _"Efficient Verification of Lingua Franca Models"_.  
-This page provides the technical report and accompanying artifact prepared to support the paper's evaluation.  
+Welcome to the artifact page for our TACAS 2026 submission, titled _"Efficient Verification of Lingua Franca Models"_.
+
+This page provides the technical report and accompanying artifact prepared to support the paper's evaluation.
+
 All references to the authors have been removed to ensure anonymity during the review process.
 
 ---

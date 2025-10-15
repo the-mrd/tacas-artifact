@@ -75,21 +75,20 @@ installed on their machine. [Docker desktop](https://docs.docker.com/desktop/) i
 recommended for Windows and MacOS users. Linux users can follow the
 installation instructions for their specific distribution.
 
-To test `lf-mc` (contains both `lf-maude` and `lf-mc`):
+To test `lf-mc` (contains both `lf-maude` and `lf-mc`) open a new shell session inside the docker instance (will download the image the first time the command is run, then reuse the cached image on subsequent runs):
 
 <div class="command-block">
   <button onclick="copyCommand(this)" data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l">Copy</button>
   <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
 </div>
 
+The experiments are located in `/opt/lf-maude/examples/src/` inside the docker instance. To compile and
+verify the `TrainDoor_v3.lf` example, run the following command:
+
 <div class="command-block">
   <button onclick="copyCommand(this)" data-command="lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf">Copy</button>
   <span class="prompt">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
 </div>
-
-<!-- First command block -->
-
-<!-- Second command block -->
 
 We also provide native `maude` files that can be run with the following command
 inside Docker:
@@ -101,24 +100,23 @@ maude lf-main-concrete.maude examples/pingPong.maude">Copy</button>
 <span class="prompt">docker:/#</span> maude lf-main-concrete.maude examples/pingPong.maude
 </div>
 
-To test our real-time maude analysis, a separate Docker image is provided:
+To test our `real-time maude` analysis, a separate Docker image is provided:
 
 <div class="command-block">
   <button onclick="copyCommand(this)" data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l">Copy</button>
   <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
 </div>
 
+To run the analysis commands for the `ADAS` example, use the following command:
+
 <div class="command-block">
   <button onclick="copyCommand(this)" data-command="maude /opt/lf-maude/RTM-ADCAS.maude">Copy</button>
   <span class="prompt">docker:/#</span> maude /opt/lf-maude/RTM-ADCAS.maude
 </div>
 
-<!-- ```console -->
-<!-- user@host:~$ docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l -->
-<!-- docker:/# maude /opt/lf-maude/RTMADAS.maude -->
-<!-- ``` -->
-
 ## Source code Structure
+
+Each subfolder within the archive contains the source files of its associated project.
 
 ```
 code.zip/
@@ -128,11 +126,9 @@ code.zip/
 checksum.txt
 ```
 
-Each subfolder contains its own source files.
-
 ### **lf-maude**
 
-`lf-maude` contains the maude intepreter for lingua-franca.
+`lf-maude` contains the _maude intepreter_ for lingua-franca.
 
 ```
 lf-maude
@@ -153,7 +149,7 @@ lf-maude
         └── UnsafeSend.lf
 ```
 
-At the root of the directory are the `.maude` files that implement the _LF_ interpreter.
+At the root of the directory are the `.maude` files that implement our LF interpreter.
 The `examples` subfolder contains the case studies used in the experiments. The
 `.maude` files within are hand-written translation of the verification done in
 _LF-verifier_, together with additional analysis in some cases.  
@@ -193,9 +189,9 @@ lf-mc/
 ```
 
 This is a `Java` project built using `gradle`. The build used for this submission
-is included in the docker image referenced above, but also available
-[here](lf-mc-1.1-package.tar.gz) (requires `java 1.7`). In order to build the
-project from source use the `./gradlew assemble` command at the root of the `lf-mc` folder.
+is included in the docker image referenced above, but also [available here](lf-mc-1.1-package.tar.gz)
+(requires `java 1.7` to run). In order to build the
+project from source run the `./gradlew assemble` command at the root of the `lf-mc` folder.
 
 ### **lf-rt-maude**
 
