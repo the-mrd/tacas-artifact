@@ -4,8 +4,9 @@ layout: default
 
 <style>
 .command-block {
-  background-color: var(--color-canvas-subtle, #f6f8fa);  /* likely matches light-mode code background */
-  color: var(--color-fg-default, #24292e);               /* default text color */
+  background-color: var(--color-canvas-subtle, #f6f8fa);
+    /* fallback #f6f8fa if variable is missing */
+  color: var(--color-fg-default, #24292e);
   padding: 1em;
   border-radius: 6px;
   overflow-x: auto;
@@ -23,7 +24,7 @@ layout: default
   position: absolute;
   top: 6px;
   right: 6px;
-  background: var(--color-neutral-muted, #f0f0f0);
+  background: var(--color-canvas-default, #ffffff);
   color: var(--color-fg-default, #24292e);
   border: 1px solid var(--color-border-default, #d0d7de);
   border-radius: 6px;
@@ -33,7 +34,7 @@ layout: default
   transition: background 0.2s ease;
 }
 .command-block button:hover {
-  background: var(--color-neutral-subtle, #e1e4e8);
+  background: var(--color-canvas-subtle, #f6f8fa);
 }
 .command-block button.copied {
   color: var(--color-success-fg, #1f6feb);
