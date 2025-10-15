@@ -26,10 +26,21 @@ installation instructions for their specific distribution.
 
 To test `lf-mc` (contains both`lf-maude`and`lf-mc`):
 
-<pre style="background-color:#0d1117;color:#e6edf3;padding:1em;border-radius:6px;overflow-x:auto;font-family:SFMono-Regular,Consolas,monospace;">
-<span style="color:#00ff7f;">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
-<span style="color:#00ff7f;">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
+<pre style="
+  background-color: var(--color-canvas-default, #0d1117);
+  color: var(--color-fg-default, #e6edf3);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: SFMono-Regular, Consolas, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  border: 1px solid var(--color-border-default, #30363d);
+">
+<span style="color: var(--color-success-fg, #3fb950);">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+<span style="color: var(--color-success-fg, #3fb950);">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
 </pre>
+
 <!-- ```console -->
 <!-- user@host:~$ $${\color{lightgreen}docker}$$ run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l -->
 <!-- docker:/# lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf -->
