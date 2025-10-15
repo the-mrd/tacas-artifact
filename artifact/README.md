@@ -26,10 +26,14 @@ installation instructions for their specific distribution.
 
 To test `lf-mc` (contains both`lf-maude`and`lf-mc`):
 
-```console
-user@host:~$ $${\color{lightgreen}docker}$$ run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
-docker:/# lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
-```
+<pre style="background-color:#0d1117;color:#e6edf3;padding:1em;border-radius:6px;overflow-x:auto;font-family:SFMono-Regular,Consolas,monospace;">
+<span style="color:#00ff7f;">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+<span style="color:#00ff7f;">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
+</pre>
+<!-- ```console -->
+<!-- user@host:~$ $${\color{lightgreen}docker}$$ run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l -->
+<!-- docker:/# lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf -->
+<!-- ``` -->
 
 We also provide native `maude` files that can be run with the following command
 inside Docker:
