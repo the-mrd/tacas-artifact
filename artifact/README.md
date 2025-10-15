@@ -2,6 +2,58 @@
 layout: default
 ---
 
+<style>
+.command-block {
+  background-color: var(--color-canvas-subtle, #f6f8fa);  /* likely matches light-mode code background */
+  color: var(--color-fg-default, #24292e);               /* default text color */
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: SFMono-Regular, Consolas, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  border: 1px solid var(--color-border-default, #d0d7de);
+  position: relative;
+  margin-bottom: 1em;
+}
+.command-block .prompt {
+  color: var(--color-success-fg, #1f6feb);
+}
+.command-block button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--color-neutral-muted, #f0f0f0);
+  color: var(--color-fg-default, #24292e);
+  border: 1px solid var(--color-border-default, #d0d7de);
+  border-radius: 6px;
+  font-size: 0.75em;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.command-block button:hover {
+  background: var(--color-neutral-subtle, #e1e4e8);
+}
+.command-block button.copied {
+  color: var(--color-success-fg, #1f6feb);
+  border-color: var(--color-success-fg, #1f6feb);
+}
+</style>
+
+<script>
+function copyCommand(btn) {
+  const cmd = btn.getAttribute('data-command');
+  navigator.clipboard.writeText(cmd);
+  btn.textContent = 'Copied!';
+  btn.classList.add('copied');
+  setTimeout(() => {
+    btn.textContent = 'Copy';
+    btn.classList.remove('copied');
+  }, 2000);
+}
+</script>
+
 # Artifact for "Efficient Verification of Lingua Franca Models"
 
 The [code](code.zip) archive contains the source files and Docker configurations
@@ -22,166 +74,45 @@ installed on their machine. [Docker desktop](https://docs.docker.com/desktop/) i
 recommended for Windows and MacOS users. Linux users can follow the
 installation instructions for their specific distribution.
 
-To test `lf-mc` (contains both`lf-maude`and`lf-mc`):
+To test `lf-mc` (contains both `lf-maude` and `lf-mc`):
+
+<div class="command-block">
+  <button onclick="copyCommand(this)" data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l">Copy</button>
+  <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+</div>
+
+<div class="command-block">
+  <button onclick="copyCommand(this)" data-command="lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf">Copy</button>
+  <span class="prompt">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
+</div>
 
 <!-- First command block -->
-<pre style="
-  background-color: var(--color-canvas-default, #0d1117);
-  color: var(--color-fg-default, #e6edf3);
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-family: SFMono-Regular, Consolas, monospace;
-  font-size: 0.9em;
-  line-height: 1.5;
-  border: 1px solid var(--color-border-default, #30363d);
-  position: relative;
-  margin-bottom: 1em;
-">
-  <button style="
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    background: var(--color-neutral-muted, #161b22);
-    color: var(--color-fg-default, #e6edf3);
-    border: 1px solid var(--color-border-default, #30363d);
-    border-radius: 6px;
-    font-size: 0.75em;
-    padding: 0.25em 0.5em;
-    cursor: pointer;
-  " onclick="navigator.clipboard.writeText('docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
-<span style="color: var(--color-success-fg, #3fb950);">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
-</pre>
 
 <!-- Second command block -->
-<pre style="
-  background-color: var(--color-canvas-default, #0d1117);
-  color: var(--color-fg-default, #e6edf3);
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-family: SFMono-Regular, Consolas, monospace;
-  font-size: 0.9em;
-  line-height: 1.5;
-  border: 1px solid var(--color-border-default, #30363d);
-  position: relative;
-">
-  <button style="
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    background: var(--color-neutral-muted, #161b22);
-    color: var(--color-fg-default, #e6edf3);
-    border: 1px solid var(--color-border-default, #30363d);
-    border-radius: 6px;
-    font-size: 0.75em;
-    padding: 0.25em 0.5em;
-    cursor: pointer;
-  " onclick="navigator.clipboard.writeText('lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
-<span style="color: var(--color-success-fg, #3fb950);">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
-</pre>
-
-<!-- ```console -->
-<!-- user@host:~$ docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l -->
-<!-- docker:/# lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf -->
-<!-- ``` -->
 
 We also provide native `maude` files that can be run with the following command
 inside Docker:
 
-<pre style="
-  background-color: var(--color-canvas-default, #0d1117);
-  color: var(--color-fg-default, #e6edf3);
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-family: SFMono-Regular, Consolas, monospace;
-  font-size: 0.9em;
-  line-height: 1.5;
-  border: 1px solid var(--color-border-default, #30363d);
-  position: relative;
-  margin-bottom: 1em;
-">
-  <button style="
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    background: var(--color-neutral-muted, #161b22);
-    color: var(--color-fg-default, #e6edf3);
-    border: 1px solid var(--color-border-default, #30363d);
-    border-radius: 6px;
-    font-size: 0.75em;
-    padding: 0.25em 0.5em;
-    cursor: pointer;
-  " onclick="navigator.clipboard.writeText(`cd /opt/lf-maude/
-maude lf-main-concrete.maude examples/pingPong.maude`); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
-<span style="color: var(--color-success-fg, #3fb950);">docker:/#</span> cd /opt/lf-maude/
-<span style="color: var(--color-success-fg, #3fb950);">docker:/opt/lf-maude#</span> maude lf-main-concrete.maude examples/pingPong.maude
-</pre>
-
-<!-- ```console -->
-<!-- docker:/# cd /opt/lf-maude/ -->
-<!-- docker:/opt/lf-maude# maude lf-main-concrete.maude examples/pingPong.maude -->
-<!-- ``` -->
+<div class="command-block">
+  <button onclick="copyCommand(this)" data-command="cd /opt/lf-maude/
+maude lf-main-concrete.maude examples/pingPong.maude">Copy</button>
+  <span class="prompt">docker:/#</span> cd /opt/lf-maude/
+maude lf-main-concrete.maude examples/pingPong.maude
+</div>
 
 ---
 
 To test our real-time maude analysis, a separate Docker image is provided:
 
-<pre style="
-  background-color: var(--color-canvas-default, #0d1117);
-  color: var(--color-fg-default, #e6edf3);
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-family: SFMono-Regular, Consolas, monospace;
-  font-size: 0.9em;
-  line-height: 1.5;
-  border: 1px solid var(--color-border-default, #30363d);
-  position: relative;
-  margin-bottom: 1em;
-">
-  <button style="
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    background: var(--color-neutral-muted, #161b22);
-    color: var(--color-fg-default, #e6edf3);
-    border: 1px solid var(--color-border-default, #30363d);
-    border-radius: 6px;
-    font-size: 0.75em;
-    padding: 0.25em 0.5em;
-    cursor: pointer;
-  " onclick="navigator.clipboard.writeText('docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
-<span style="color: var(--color-success-fg, #3fb950);">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
-</pre>
+<div class="command-block">
+  <button onclick="copyCommand(this)" data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l">Copy</button>
+  <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
+</div>
 
-<pre style="
-  background-color: var(--color-canvas-default, #0d1117);
-  color: var(--color-fg-default, #e6edf3);
-  padding: 1em;
-  border-radius: 6px;
-  overflow-x: auto;
-  font-family: SFMono-Regular, Consolas, monospace;
-  font-size: 0.9em;
-  line-height: 1.5;
-  border: 1px solid var(--color-border-default, #30363d);
-  position: relative;
-">
-  <button style="
-    position: absolute;
-    top: 6px;
-    right: 6px;
-    background: var(--color-neutral-muted, #161b22);
-    color: var(--color-fg-default, #e6edf3);
-    border: 1px solid var(--color-border-default, #30363d);
-    border-radius: 6px;
-    font-size: 0.75em;
-    padding: 0.25em 0.5em;
-    cursor: pointer;
-  " onclick="navigator.clipboard.writeText('maude /opt/lf-maude/RTMADAS.maude'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
-<span style="color: var(--color-success-fg, #3fb950);">docker:/#</span> maude /opt/lf-maude/RTMADAS.maude
-</pre>
+<div class="command-block">
+  <button onclick="copyCommand(this)" data-command="maude /opt/lf-maude/RTM-ADCAS.maude">Copy</button>
+  <span class="prompt">docker:/#</span> maude /opt/lf-maude/RTM-ADCAS.maude
+</div>
 
 <!-- ```console -->
 <!-- user@host:~$ docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l -->
