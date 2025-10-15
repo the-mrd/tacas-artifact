@@ -101,8 +101,6 @@ maude lf-main-concrete.maude examples/pingPong.maude">Copy</button>
 <span class="prompt">docker:/#</span> maude lf-main-concrete.maude examples/pingPong.maude
 </div>
 
----
-
 To test our real-time maude analysis, a separate Docker image is provided:
 
 <div class="command-block">
@@ -132,7 +130,7 @@ checksum.txt
 
 Each subfolder contains its own source files.
 
-### lf-maude
+### **lf-maude**
 
 `lf-maude` contains the maude intepreter for lingua-franca.
 
@@ -163,7 +161,7 @@ Inside `examples/src/` are `.lf` files of _LF-verifier_ together with annotation
 analysis and physical actions. These are the files `lf-mc` reads to automatically
 generate the `.maude` files in `examples/mod-gen/`.
 
-### lf-mc
+### **lf-mc**
 
 `lf-mc` contains the lingua franca compiler that automatically translates  
 _.lf_ files with analysis annotations into maude files that can be run  
@@ -199,7 +197,7 @@ is included in the docker image referenced above, but also available
 [here](lf-mc-1.1-package.tar.gz) (requires `java 1.7`). In order to build the
 project from source use the `./gradlew assemble` command at the root of the `lf-mc` folder.
 
-### LF-RT-MAUDE
+### **lf-rt-maude**
 
 `lf-rt-maude` contains the real-time analysis support for lingua-franca programs.
 This requires `maude 2.7` to run, which conflicts with newer versions of `maude`
