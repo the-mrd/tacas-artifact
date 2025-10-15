@@ -24,6 +24,36 @@ installation instructions for their specific distribution.
 
 To test `lf-mc` (contains both`lf-maude`and`lf-mc`):
 
+<!-- First command block -->
+<pre style="
+  background-color: var(--color-canvas-default, #0d1117);
+  color: var(--color-fg-default, #e6edf3);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: SFMono-Regular, Consolas, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  border: 1px solid var(--color-border-default, #30363d);
+  position: relative;
+  margin-bottom: 1em;
+">
+  <button style="
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--color-neutral-muted, #161b22);
+    color: var(--color-fg-default, #e6edf3);
+    border: 1px solid var(--color-border-default, #30363d);
+    border-radius: 6px;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+  " onclick="navigator.clipboard.writeText('docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
+<span style="color: var(--color-success-fg, #3fb950);">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+</pre>
+
+<!-- Second command block -->
 <pre style="
   background-color: var(--color-canvas-default, #0d1117);
   color: var(--color-fg-default, #e6edf3);
@@ -47,33 +77,116 @@ To test `lf-mc` (contains both`lf-maude`and`lf-mc`):
     font-size: 0.75em;
     padding: 0.25em 0.5em;
     cursor: pointer;
-  " onclick="navigator.clipboard.writeText(`docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
-lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf`); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
-<span style="color: var(--color-success-fg, #3fb950);">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
+  " onclick="navigator.clipboard.writeText('lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
 <span style="color: var(--color-success-fg, #3fb950);">docker:/#</span> lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf
 </pre>
 
 <!-- ```console -->
-<!-- user@host:~$ $${\color{lightgreen}docker}$$ run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l -->
+<!-- user@host:~$ docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l -->
 <!-- docker:/# lfc /opt/lf-maude/examples/src/TrainDoor_v3.lf -->
 <!-- ``` -->
 
 We also provide native `maude` files that can be run with the following command
 inside Docker:
 
-```console
-docker:/# cd /opt/lf-maude/
-docker:/opt/lf-maude# maude lf-main-concrete.maude examples/pingPong.maude
-```
+<pre style="
+  background-color: var(--color-canvas-default, #0d1117);
+  color: var(--color-fg-default, #e6edf3);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: SFMono-Regular, Consolas, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  border: 1px solid var(--color-border-default, #30363d);
+  position: relative;
+  margin-bottom: 1em;
+">
+  <button style="
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--color-neutral-muted, #161b22);
+    color: var(--color-fg-default, #e6edf3);
+    border: 1px solid var(--color-border-default, #30363d);
+    border-radius: 6px;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+  " onclick="navigator.clipboard.writeText(`cd /opt/lf-maude/
+maude lf-main-concrete.maude examples/pingPong.maude`); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
+<span style="color: var(--color-success-fg, #3fb950);">docker:/#</span> cd /opt/lf-maude/
+<span style="color: var(--color-success-fg, #3fb950);">docker:/opt/lf-maude#</span> maude lf-main-concrete.maude examples/pingPong.maude
+</pre>
+
+<!-- ```console -->
+<!-- docker:/# cd /opt/lf-maude/ -->
+<!-- docker:/opt/lf-maude# maude lf-main-concrete.maude examples/pingPong.maude -->
+<!-- ``` -->
 
 ---
 
 To test our real-time maude analysis, a separate Docker image is provided:
 
-```console
-user@host:~$ docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
-docker:/# maude /opt/lf-maude/RTMADAS.maude
-```
+<pre style="
+  background-color: var(--color-canvas-default, #0d1117);
+  color: var(--color-fg-default, #e6edf3);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: SFMono-Regular, Consolas, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  border: 1px solid var(--color-border-default, #30363d);
+  position: relative;
+  margin-bottom: 1em;
+">
+  <button style="
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--color-neutral-muted, #161b22);
+    color: var(--color-fg-default, #e6edf3);
+    border: 1px solid var(--color-border-default, #30363d);
+    border-radius: 6px;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+  " onclick="navigator.clipboard.writeText('docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
+<span style="color: var(--color-success-fg, #3fb950);">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l
+</pre>
+
+<pre style="
+  background-color: var(--color-canvas-default, #0d1117);
+  color: var(--color-fg-default, #e6edf3);
+  padding: 1em;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: SFMono-Regular, Consolas, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+  border: 1px solid var(--color-border-default, #30363d);
+  position: relative;
+">
+  <button style="
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--color-neutral-muted, #161b22);
+    color: var(--color-fg-default, #e6edf3);
+    border: 1px solid var(--color-border-default, #30363d);
+    border-radius: 6px;
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    cursor: pointer;
+  " onclick="navigator.clipboard.writeText('maude /opt/lf-maude/RTMADAS.maude'); this.textContent='Copied!'; setTimeout(()=>this.textContent='Copy',2000);">Copy</button>
+<span style="color: var(--color-success-fg, #3fb950);">docker:/#</span> maude /opt/lf-maude/RTMADAS.maude
+</pre>
+
+<!-- ```console -->
+<!-- user@host:~$ docker run -it --rm ghcr.io/symbolicsafety/lf-rtm:tacas26 bash -l -->
+<!-- docker:/# maude /opt/lf-maude/RTMADAS.maude -->
+<!-- ``` -->
 
 ## Source code Structure
 
@@ -116,8 +229,8 @@ lf-maude
 At the root of the directory are the `.maude` files that implement the _LF_ interpreter.
 The `examples` subfolder contains the case studies used in the experiments. The
 `.maude` files within are hand-written translation of the verification done in
-_LF-verifier_, together with additional analysis in some cases. Inside
-`examples/src/` are `.lf` files of _LF-verifier_ together with annotations for
+_LF-verifier_, together with additional analysis in some cases.  
+Inside `examples/src/` are `.lf` files of _LF-verifier_ together with annotations for
 analysis and physical actions. These are the files `lf-mc` reads to automatically
 generate the `.maude` files in `examples/mod-gen/`.
 
