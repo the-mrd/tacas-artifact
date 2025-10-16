@@ -1,6 +1,6 @@
 title: "TACAS 2026 anonymous submission"
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-minima
 plugins:
   - jekyll-seo-tag
 exclude:
