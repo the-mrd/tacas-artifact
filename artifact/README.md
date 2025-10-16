@@ -20,7 +20,7 @@ pre-built images from Github Container Registry.
 This requires the reviewer to have [Docker](https://www.docker.com/get-started/)
 installed on their machine. [Docker desktop](https://docs.docker.com/desktop/) is
 recommended for Windows and MacOS users. Linux users can follow the
-installation instructions for their specific distribution.
+installation instructions for their specific distribution (instructions for Ubuntu can be [found here](https://docs.docker.com/engine/install/ubuntu/)).
 
 To test `lf-mc` (contains both `lf-maude` and `lf-mc`) open a new shell session inside the docker instance (will download the image the first time the command is run, then reuse the cached image on subsequent runs):
 
