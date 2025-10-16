@@ -2,9 +2,9 @@
 layout: default
 ---
 
-# Artifact for "Efficient Verification of Lingua Franca Models"
+# Artifact instructions for "Efficient Verification of Lingua Franca Models"
 
-The [code](code.zip) archive contains the source files and Docker configurations
+The [code archive](code.zip) contains the source files and Docker configurations
 required to reproduce the results of our paper submission
 _"Efficient Verification of Lingua Franca Models"_.
 
