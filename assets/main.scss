@@ -48,7 +48,7 @@
 }
 
 /* Progressive enhancement fallback: default = no JS */
-.copy-btn { display: inline-block; }
+.copy-btn { display: none; }
 .copy-fallback {
   display: block;
   width: 100%;
@@ -64,5 +64,5 @@
 }
 
 /* When JS is active, show button and hide fallback */
-// .copy-btn { display: inline-block; }
-// .copy-fallback { display: none; }
+.js .copy-btn { display: inline-block; }
+.js .copy-fallback { display: none; }
