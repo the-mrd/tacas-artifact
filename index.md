@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: ""
 ---
 
@@ -21,7 +21,7 @@ All references to the authors have been removed to ensure anonymity during the r
 
 - [Source code](artifact/code.zip) ([zip](artifact/code.zip) [tar.gz](artifact/code.tar.gz))
 - [lf-mc package](artifact/lf-mc-1.1-package.tar.gz)
-- [Checksum file](artifact/checksum.txt)
+- [Checksum file](artifact/checksum.txt)(sha256sum)
 
 ---
 
