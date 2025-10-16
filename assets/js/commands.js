@@ -1,5 +1,5 @@
 // Mark page as JS-enabled for CSS fallbacks
-document.documentElement.classList.add('js');
+// document.documentElement.classList.add('js');
 
 function copyCommand(btn) {
   const cmd = btn.getAttribute('data-command') || '';
