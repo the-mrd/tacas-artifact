@@ -9,10 +9,10 @@ Welcome to the artifact page for our TACAS 2026 submission, titled _"Efficient V
 
 This page provides the technical report and accompanying artifact prepared to support the paper's evaluation. It contains:
 
-1. A technical report that provides additional details on the implementation and evaluation of our approach.
+1. A longer technical report that provides additional details.
 2. Manually generated Maude models and analysis commands for all 22 [LF-Verifier benchmarks](https://github.com/lf-lang/lf-verifier-benchmarks), and other
    case studies, such as the _ADAS_ system and the _train door_ example.
-3. All LF programs, with `LF-MC` annotations correspond to the _LF-Verifier_ analysis annotations,
+3. All LF programs, with `LF-MC` annotations corresponding to the _LF-Verifier_ analysis annotations,
    which are commented out.
 4. Maude files defining the semantics of the targeted subset of LF.
 5. `LF-MC` source code.
