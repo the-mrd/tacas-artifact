@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: base
 ---
 
 # Artifact for "Efficient Verification of Lingua Franca Models"
