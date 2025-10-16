@@ -28,7 +28,6 @@ To test `lf-mc` (contains both `lf-maude` and `lf-mc`) open a new shell session 
     <button class="copy-btn" onclick="copyCommand(this)"
     data-command="docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l">Copy</button>
     <span class="prompt">user@host:~$</span> docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l
-<textarea class="copy-fallback" rows="2" readonly>docker run -it --rm ghcr.io/symbolicsafety/lf-mc:tacas26 bash -l</textarea>
 </div>
 
 The experiments are located in `/opt/lf-maude/examples/src/` inside the docker instance. To compile and
