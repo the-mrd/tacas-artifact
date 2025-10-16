@@ -163,3 +163,8 @@ lf-rt-maude
 ```
 
 The `.maude` files shown above contain analysis done using timed CTL model checking.
+
+<script>
+  document.documentElement.classList.add('js');
+</script>
+<script src="{{ '/assets/js/commands.js' | relative_url }}" defer></script>
