@@ -2,11 +2,11 @@
 layout: default
 ---
 
-# Artifact instructions for "Efficient Verification of Lingua Franca Models"
+# Artifact instructions for "Efficient Verification of Lingua Franca Programs"
 
 The [code archive](code.zip) contains the source files and Docker configurations
 required to reproduce the results of our paper submission
-_"Efficient Verification of Lingua Franca Models"_.
+_"Efficient Verification of Lingua Franca Programs"_.
 
 Below are instructions on how to set up the environment and run the experiments
 in Docker, followed by a description of the of the sources' folder structure.
